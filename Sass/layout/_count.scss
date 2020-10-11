@@ -1,0 +1,66 @@
+.counters .container {
+    width: 80%;
+    margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+    text-align: center;
+    h3{
+        font-size: 1.3rem;
+    }
+}
+
+.container .fa-youtube{
+    color: red;
+}
+.container .fa-twitter{
+    color: rgb(0, 204, 255);
+}
+.container .fa-facebook{
+    color: rgb(0, 26, 255);
+}
+.container .fa-linkedin{
+    color: #48a4da;
+}
+
+.counters .counter {
+	font-size: 2.1rem;
+	font-weight: bold;
+	margin: 10px 0;
+}
+@media (max-width: 320px) {
+	.counters{
+		width: 100%;
+		margin: auto;
+	}
+	.counters .container i{
+		font-size: 2rem;
+	}
+	.counters .container h3{
+        font-size: 1rem;
+	}
+	.counters .counter{
+		font-size: 1rem;
+	}
+}
+@media (max-width: 700px) {
+	.counters .counter {
+		width: 90%;
+		margin: auto;
+		font-size: 1.2rem;
+	}
+	.counters .container {
+		margin-top: -1.6rem;
+		padding-bottom: 1rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.container .cont i{
+        font-size: 2rem;
+    }
+    .container .cont h3{
+        font-size: 1.4rem !important;
+    }
+    .container .cont{
+        font-size: .4rem !important;
+    }
+}

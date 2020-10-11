@@ -1,0 +1,120 @@
+.sikill-img{
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    background-color: #959595;
+    border: 4px solid rgb(238, 238, 238);
+    img{
+        width: 250px;
+        height: auto;
+        margin: 0 0rem;
+    }
+}
+.skill-bars{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.skill-progress .skill {
+    width: 80%;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.skill-progress .skill::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background-color: #959595;
+    bottom: 0;
+}
+
+.skill-progress .skill .skill-bar:hover::before {
+    height: 100%;
+}
+
+.skill-progress .skill p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #6e7797;
+    margin: .3rem 0;
+}
+
+.skill-progress .skill .skill-bar {
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    animation: animated 1s both;
+}
+
+.skill-progress .skill .skill-bar.skill1 {
+    background-color:#ff3d4f;
+    width: 50%;
+}
+
+.skill-progress .skill .skill-bar.skill2 {
+    background-color:#ff3d4f;
+    width: 60%;
+}
+
+.skill-progress .skill .skill-bar.skill3 {
+    background-color:#ff3d4f;
+    width: 70%;
+}
+
+.skill-progress .skill .skill-bar.skill4 {
+    background-color:#ff3d4f;
+    width: 80%;
+}
+
+.skill-progress .skill .skill-bar span {
+    color: #fff;
+    position: absolute;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.skill-progress .skill .skill-bar.skill1 span.skill-count,
+.skill-progress .skill .skill-bar.skill2 span.skill-count,
+.skill-progress .skill .skill-bar.skill3 span.skill-count,
+.skill-progress .skill .skill-bar.skill4 span.skill-count{
+    right: 0;
+    text-align: center;
+}
+
+@keyframes animated {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: matrix3d(0, 0, 0);
+    }
+}
+@media(max-width:320px){
+    .sikill-img{
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .skill-bars{
+        margin: -4rem auto;
+        width: 80%;
+        // margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skill-progress .skill {
+        width: 100%;
+    }
+}
